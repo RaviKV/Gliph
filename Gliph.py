@@ -1,6 +1,6 @@
 import wx
 import os
-import re
+import re # for pattern matching
 import fitz  # PyMuPDF for handling PDFs
 import pandas as pd
 from docx import Document
@@ -50,7 +50,7 @@ class MaskingApp(wx.Frame):
         panel.SetSizer(vbox)
 
         self.SetSize((800, 600))
-        self.SetTitle('Mask Sensitive Information')
+        self.SetTitle('Gliph:Mask Sensitive Information')
         self.Centre()
 
     def on_mask(self, event):
