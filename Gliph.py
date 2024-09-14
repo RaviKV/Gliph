@@ -1,3 +1,7 @@
+# I was working with a vendor to implement AI chatbot and they had a big value prop that when they index your data they run it via there security masking tool to ensure all sensitive data is masked before
+# the data is sent to Ai, This tool is built on the same idea but for indivisuals who need to be cautios around using Ai chats or prompts. 
+# This is a UI based app, you can define your own keywords or sensitive words and use it as config file. This tool automatically masks all phone numbers, email address and ip address by default and then
+# using your config file it will mask all those word on the file.
 import wx
 import os
 import re # for pattern matching
@@ -12,13 +16,13 @@ class MaskingApp(wx.Frame):
         # Set up the GUI
         panel = wx.Panel(self)
 
-        # Set background color
+        # rkv -Set background color we can choose any color however I have left it to use the system color for the window.
         # panel.SetBackgroundColour(wx.Colour(200, 255, 200))  # Light green background
 
         # Create a vertical sizer for the panel
         vbox = wx.BoxSizer(wx.VERTICAL)
 
-        # Add a static text for the description
+        # rkv -Add a static text for the description, helps you understand the usage of the app
         description = wx.StaticText(panel, label="This tool helps you mask sensitive data within your file, "
                                                 "The config should contains sensitive words to be masked.")
         vbox.Add(description, flag=wx.EXPAND | wx.ALL, border=10)
